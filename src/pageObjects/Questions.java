@@ -13,8 +13,11 @@ public class Questions
 
 	public static WebElement pquestions(WebDriver driver)
 	{
-		
+		/*
 		    WebElement askQ = driver.findElement(By.xpath("//a[@data-target='#askQuestion']"));
+		    askQ.click();
+		 */   
+		    WebElement askQ = driver.findElement(By.xpath("//a[@data-action='ask-question']"));
 		    askQ.click();
 		    
 	    
@@ -24,7 +27,7 @@ public class Questions
 			
 			WebElement title = driver.findElement(By.xpath("//input[@id='question-title']"));
 			title.click();
-			title.sendKeys("Hello Prashant ?");
+			title.sendKeys("What you think about Education in India ?");
 			
 			WebElement ds = driver.findElement(By.xpath("//input[@id='question-title']"));
 			ds.click();
@@ -35,7 +38,7 @@ public class Questions
 			
 			WebElement desc = driver.findElement(By.xpath("//iframe[@id='question-description_ifr']"));
 			desc.click();
-			desc.sendKeys("Testing discussions Questions");
+			desc.sendKeys("Education in India");
 			
 			
 			WebElement topics = driver.findElement(By.xpath("//input[@placeholder='Topics (example: DU, learning, philosophy)']"));
