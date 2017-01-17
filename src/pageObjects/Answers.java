@@ -13,11 +13,14 @@ public class Answers
 
 	public static WebElement panswers(WebDriver driver)
 	{
+		driver.navigate().to("http://www.edunuts.com/discussions");
+		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
-	    WebElement dis = driver.findElement(By.xpath("h4[@class='question-title'"));
+	    WebElement dis = driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/h4/a"));
 	    dis.click();
 	    
-	    WebElement Wans = driver.findElement(By.xpath("//a[@data-target='#answer-question']"));
+	    WebElement Wans = driver.findElement(By.xpath("//a[@data-action='answer-question']"));
 	    Wans.click();
 	    
 	    
@@ -29,7 +32,7 @@ public class Answers
 	    ans.click();
 	    ans.sendKeys("Testing Testing Testing Testing");
 		
-	    WebElement submit = driver.findElement(By.xpath("//button[@type'submit']"));
+	    WebElement submit = driver.findElement(By.xpath("//button[@type='submit']"));
 	    submit.click();
 		
 		actt.keyUp(Keys.LEFT_CONTROL).keyDown(Keys.LEFT_SHIFT).perform();

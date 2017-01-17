@@ -42,7 +42,8 @@ public class EditQuestions
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			
-	        driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[1]/div/div/div/form/div[2]/div/ul/li[4]/a")).click();
+	   //     driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[1]/div/div/div/form/div[2]/div/ul/li[4]/a")).click();
+			driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[1]/div/div/div/form/div[2]/div/ul/li[1]/a")).click();
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);	
 		

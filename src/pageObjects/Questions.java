@@ -47,7 +47,8 @@ public class Questions
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			
-			driver.findElement(By.xpath("html/body/div[2]/div/div/form/div[1]/div[2]/ul/li[3]/a/strong")).click();
+	//		driver.findElement(By.xpath("html/body/div[2]/div/div/form/div[1]/div[2]/ul/li[3]/a/strong")).click();
+			driver.findElement(By.xpath("html/body/div[3]/div/div/form/div[1]/div[2]/ul/li[1]/a")).click();
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			/*

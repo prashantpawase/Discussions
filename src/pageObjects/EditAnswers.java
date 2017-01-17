@@ -12,6 +12,10 @@ public class EditAnswers
 
 	public static WebElement peditanswers(WebDriver driver)
 	{
+       
+		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
 
 	    WebElement EdtA = driver.findElement(By.xpath("//i[@class='glyphicon glyphicon-edit']"));
 	    EdtA.click();
