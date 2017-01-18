@@ -31,6 +31,10 @@ public class Answers
 	    WebElement ans = driver.findElement(By.xpath("//iframe[@id='answer-description_ifr']"));
 	    ans.click();
 	    ans.sendKeys("Testing Testing Testing Testing");
+	    
+	    WebElement verify = driver.findElement(By.xpath("//iframe[@id='answer-description_ifr']"));
+	    System.out.println(verify.getText());
+	    
 		
 	    WebElement submit = driver.findElement(By.xpath("//button[@type='submit']"));
 	    submit.click();

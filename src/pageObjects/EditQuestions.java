@@ -22,7 +22,7 @@ public class EditQuestions
 		    WebElement Utitle = driver.findElement(By.xpath("//input[@id='question-title']"));
 			Utitle.click();
 			Utitle.clear();
-			Utitle.sendKeys("How to studying?");
+			Utitle.sendKeys("How to start studying?");
 		    
 	      
 			WebElement Udesc = driver.findElement(By.xpath("//iframe[@id='question-description_ifr']"));
@@ -54,6 +54,10 @@ public class EditQuestions
 			driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 		
 		
+			WebElement Verify = driver.findElement(By.xpath("//h4[@class='question-title']"));
+		    System.out.println(Verify.getText());
+			
+			
 		return null;
 		
 	}

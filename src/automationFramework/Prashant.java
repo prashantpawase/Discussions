@@ -13,6 +13,7 @@ import pageObjects.EditAnswers;
 import pageObjects.EditQuestions;
 import pageObjects.Home_Page;
 import pageObjects.Questions;
+import pageObjects.UDvote;
 import utility.Constant;
 
 public class Prashant
@@ -82,6 +83,16 @@ public class Prashant
 	    try
 	    {
 	    	EditAnswers.peditanswers(driver).click();
+	    	Thread.sleep(1000);
+	    }
+	    catch(Exception e)
+	    {
+	    	System.out.println("");
+	    }
+	    
+	    try
+	    {
+	    	UDvote.pUDvote(driver).click();
 	    	Thread.sleep(1000);
 	    }
 	    catch(Exception e)

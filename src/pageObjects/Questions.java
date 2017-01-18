@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 public class Questions 
 {
 
-	public static WebElement pquestions(WebDriver driver)
+	public static WebElement pquestions(WebDriver driver) throws InterruptedException
 	{
 		/*
 		    WebElement askQ = driver.findElement(By.xpath("//a[@data-target='#askQuestion']"));
@@ -58,6 +58,28 @@ public class Questions
 			*/
 			WebElement Submit = driver.findElement(By.xpath("//button[@type='submit']"));
 			Submit.click();
+		
+			
+    		 WebElement erromsg =  driver.findElement(By.xpath("//span[@class='msg']"));
+		     String txt = erromsg.getText();
+		        
+		     
+		     
+		      if(txt.equals("Question posted ssuccessfully\033[0m"))
+		       {
+		         System.out.println("\033[32;1;2mtrue");
+		         System.out.println("\033[32;1;2mSuccess Message\033[0m ---> " + erromsg.getText());
+/*
+		       }
+		       else
+		       {
+		        
+		    	System.out.println("false");
+		        System.out.println("\033[31;1mError Message\033[0m ---> " + erromsg.getText());
+		        }
+			
+*/			
+			Thread.sleep(1000);
 			
 		    act.keyUp(Keys.LEFT_CONTROL).keyDown(Keys.LEFT_SHIFT).perform();
 	/*
@@ -70,12 +92,28 @@ public class Questions
 		    System.out.println(Verify.getText());
 		    
 		    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		    
+	/*	    
 		    String WindowHandl = driver.getWindowHandle();
 		    driver.switchTo().window(WindowHandl);
+	*/	    
+		    
+		       }
+		       else
+		       {
+		        
+		    	System.out.println("\033[31;1mfalse\033[0m");
+		        System.out.println("\033[31;1mError Message\033[0m ---> " + erromsg.getText());
+		        
+		        driver.close();
+		        
+		        driver.navigate().to("http://www.edunuts.com/discussions");
+		        
+		       }
 		    
 		    
 		return null;
+		
+		       
 		
 	}
 }
