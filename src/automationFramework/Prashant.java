@@ -23,6 +23,7 @@ public class Prashant
 	
 	public static void main(String args[]) throws Exception
 	{
+		System.setProperty("webdriver.gecko.driver", "/home/prashant/Prashant/External-Jars/geckodriver-v0.14.0-linux64.tar.gz/geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get(Constant.URL);
 		driver.manage().window().maximize();
