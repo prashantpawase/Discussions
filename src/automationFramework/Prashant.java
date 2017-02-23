@@ -27,6 +27,7 @@ public class Prashant
 		driver = new FirefoxDriver();
 		driver.get(Constant.URL);
 		driver.manage().window().maximize();
+		Thread.sleep(1000);
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		
 		WebElement city = driver.findElement(By.xpath("//a[@data-url='delhi']"));
@@ -38,7 +39,7 @@ public class Prashant
 		System.out.println("Login Success");
 		
 		System.out.println(driver.getTitle());
-		
+	
 		Thread.sleep(1000);
 		
 		WebElement discussions = driver.findElement(By.xpath("//a[@href='http://www.edunuts.com/discussions']"));
