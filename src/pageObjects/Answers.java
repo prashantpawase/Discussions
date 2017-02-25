@@ -20,6 +20,8 @@ public class Answers
 	    WebElement dis = driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/h4/a"));
 	    dis.click();
 	    
+	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	    
 	    WebElement Wans = driver.findElement(By.xpath("//a[@data-action='answer-question']"));
 	    Wans.click();
 	    
@@ -30,7 +32,7 @@ public class Answers
 	    
 	    WebElement ans = driver.findElement(By.xpath("//iframe[@id='answer-description_ifr']"));
 	    ans.click();
-	    ans.sendKeys("Testing Testing Testing Testing");
+	    ans.sendKeys("Indian Education is good at certain points");
 	    
 	    WebElement verify = driver.findElement(By.xpath("//iframe[@id='answer-description_ifr']"));
 	    System.out.println(verify.getText());

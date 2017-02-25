@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import highlight.highlightElement;
+
 public class Questions 
 {
 
@@ -18,6 +20,7 @@ public class Questions
 		    askQ.click();
 		 */   
 		    WebElement askQ = driver.findElement(By.xpath("//a[@data-action='ask-question']"));
+		    highlightElement.highLightElement(driver, askQ);
 		    askQ.click();
 		    
 	    
@@ -26,10 +29,12 @@ public class Questions
 			act.keyDown(Keys.LEFT_CONTROL).keyDown(Keys.LEFT_SHIFT).perform();
 			
 			WebElement title = driver.findElement(By.xpath("//input[@id='question-title']"));
+			highlightElement.highLightElement(driver, title);
 			title.click();
 			title.sendKeys("What you think about Education in India ?");
 			
 			WebElement ds = driver.findElement(By.xpath("//input[@id='question-title']"));
+			highlightElement.highLightElement(driver, ds);
 			ds.click();
 			ds.sendKeys(Keys.TAB);
 			
@@ -37,11 +42,13 @@ public class Questions
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			
 			WebElement desc = driver.findElement(By.xpath("//iframe[@id='question-description_ifr']"));
+			highlightElement.highLightElement(driver, desc);
 			desc.click();
 			desc.sendKeys("Education in India");
 			
 			
 			WebElement topics = driver.findElement(By.xpath("//input[@placeholder='Topics (example: DU, learning, philosophy)']"));
+			highlightElement.highLightElement(driver, topics);
 			topics.click();
 			topics.sendKeys("education");
 			
@@ -57,15 +64,17 @@ public class Questions
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			*/
 			WebElement Submit = driver.findElement(By.xpath("//button[@type='submit']"));
+			highlightElement.highLightElement(driver, Submit);
 			Submit.click();
 		
 			
     		 WebElement erromsg =  driver.findElement(By.xpath("//span[@class='msg']"));
-		     String txt = erromsg.getText();
+		     highlightElement.highLightElement(driver, erromsg);
+    		 String txt = erromsg.getText();
 		        
 		     
 		     
-		      if(txt.equals("Question posted ssuccessfully\033[0m"))
+		      if(txt.equals("Question posted successfully"))
 		       {
 		         System.out.println("\033[32;1;2mtrue");
 		         System.out.println("\033[32;1;2mSuccess Message\033[0m ---> " + erromsg.getText());

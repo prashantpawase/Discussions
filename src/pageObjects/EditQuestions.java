@@ -7,6 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import highlight.highlightElement;
+
 public class EditQuestions 
 {
 
@@ -16,16 +18,19 @@ public class EditQuestions
 		
 		
 		    WebElement EdtQ = driver.findElement(By.xpath("//i[@class='glyphicon glyphicon-edit']"));
+		    highlightElement.highLightElement(driver, EdtQ);
 		    EdtQ.click();
 		    
 		    
 		    WebElement Utitle = driver.findElement(By.xpath("//input[@id='question-title']"));
-			Utitle.click();
+			highlightElement.highLightElement(driver, Utitle);
+		    Utitle.click();
 			Utitle.clear();
 			Utitle.sendKeys("How to start studying?");
 		    
 	      
 			WebElement Udesc = driver.findElement(By.xpath("//iframe[@id='question-description_ifr']"));
+			highlightElement.highLightElement(driver, Udesc);
 			Udesc.click();
 			Udesc.sendKeys(Keys.CONTROL + "a");
 			Udesc.sendKeys(Keys.DELETE);
@@ -33,10 +38,12 @@ public class EditQuestions
 			
 			
 			WebElement RTopic = driver.findElement(By.xpath("//span[@data-role='remove']"));
+			highlightElement.highLightElement(driver, RTopic);
 			RTopic.click();
 			
 			
 			WebElement Utopics = driver.findElement(By.xpath("//input[@placeholder='Topics (example: DU, learning, philosophy)']"));
+			highlightElement.highLightElement(driver, Utopics);
 			Utopics.click();
 			Utopics.sendKeys("management");
 			
@@ -48,6 +55,7 @@ public class EditQuestions
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);	
 		
 			WebElement update = driver.findElement(By.xpath("//button[@type='submit']"));
+			highlightElement.highLightElement(driver, update);
 			update.click();
 			
 			

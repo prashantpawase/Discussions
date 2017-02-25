@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import appModules.SignIn_Action;
+import highlight.highlightElement;
 import pageObjects.Answers;
 import pageObjects.EditAnswers;
 import pageObjects.EditQuestions;
@@ -31,6 +32,8 @@ public class Prashant
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		
 		WebElement city = driver.findElement(By.xpath("//a[@data-url='delhi']"));
+		highlightElement.highLightElement(driver, city);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		city.click();
 		
 		Thread.sleep(1000);
@@ -43,7 +46,9 @@ public class Prashant
 		Thread.sleep(1000);
 		
 		WebElement discussions = driver.findElement(By.xpath("//a[@href='http://www.edunuts.com/discussions']"));
-	    discussions.click();
+	    highlightElement.highLightElement(driver, discussions);
+	    
+		discussions.click();
 	    
 	    Thread.sleep(2000);
 
