@@ -61,7 +61,7 @@ public class EditQuestions
 			update.click();
 */			
 			
-			Error.error(driver);
+			Error.editQerror(driver);
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			

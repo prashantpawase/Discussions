@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import ErrorMsg.Error;
 import highlight.highlightElement;
 
 public class Questions 
@@ -63,6 +64,13 @@ public class Questions
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			*/
+		
+			
+			Error.Qerror(driver);
+			
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			
+	/*		
 			WebElement Submit = driver.findElement(By.xpath("//button[@type='submit']"));
 			highlightElement.highLightElement(driver, Submit);
 			Submit.click();
@@ -105,7 +113,7 @@ public class Questions
 		    String WindowHandl = driver.getWindowHandle();
 		    driver.switchTo().window(WindowHandl);
 	*/	    
-		    
+		/*    
 		       }
 		       else
 		       {
@@ -119,7 +127,7 @@ public class Questions
 		        
 		       }
 		    
-		    
+	*/	    
 		return null;
 		
 		       
