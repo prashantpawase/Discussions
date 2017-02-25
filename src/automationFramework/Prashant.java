@@ -45,9 +45,13 @@ public class Prashant
 	
 		Thread.sleep(1000);
 		
+		
 		WebElement discussions = driver.findElement(By.xpath("//a[@href='http://www.edunuts.com/discussions']"));
-	    highlightElement.highLightElement(driver, discussions);
 	    
+		Thread.sleep(1000);
+		highlightElement.highLightElement(driver, discussions);
+	    Thread.sleep(1000);
+		
 		discussions.click();
 	    
 	    Thread.sleep(2000);

@@ -21,7 +21,7 @@ public class LogIn_Page
 	//	highLightElement(driver,element);
 		
 	 highlightElement.highLightElement(driver, element);
-		
+				
 		return element;
 	}
 	
