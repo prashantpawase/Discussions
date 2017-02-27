@@ -34,10 +34,11 @@ public class EditQuestions
 			WebElement Udesc = driver.findElement(By.xpath("//iframe[@id='question-description_ifr']"));
 			highlightElement.highLightElement(driver, Udesc);
 			Udesc.click();
-			Udesc.sendKeys(Keys.CONTROL + "a");
 			Udesc.sendKeys(Keys.DELETE);
+			Udesc.sendKeys(Keys.CONTROL + "a");
 			Udesc.sendKeys("Studying discussions Questions");
 			
+		
 			
 			WebElement RTopic = driver.findElement(By.xpath("//span[@data-role='remove']"));
 			highlightElement.highLightElement(driver, RTopic);
@@ -51,85 +52,17 @@ public class EditQuestions
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			
-	   //     driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[1]/div/div/div/form/div[2]/div/ul/li[4]/a")).click();
+	  
 			driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[1]/div/div/div/form/div[2]/div/ul/li[1]/a")).click();
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);	
-/*		
-			WebElement update = driver.findElement(By.xpath("//button[@type='submit']"));
-			highlightElement.highLightElement(driver, update);
-			update.click();
-*/			
-			
+		
 			Error.editQerror(driver);
 			
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			
 			
-			
-/*			
-			
-			driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 		
-		
-			WebElement Verify = driver.findElement(By.xpath("//h4[@class='question-title']"));
-		    System.out.println(Verify.getText());
-			
-*/			
-			
-
-			
-   	//	 WebElement erromsg =  driver.findElement(By.xpath("//span[@class='msg']"));
-	//	     highlightElement.highLightElement(driver, erromsg);
- //  		 String txt = erromsg.getText();
-		        
-		     
-		     
-		//      if(txt.equals("Question has been updated"))
-	//	       {
-		//         System.out.println("\033[32;1;2mtrue");
-	//	         System.out.println("\033[32;1;2mSuccess Message\033[0m ---> " + erromsg.getText());
-/*
-		       }
-		       else
-		       {
-		        
-		    	System.out.println("false");
-		        System.out.println("\033[31;1mError Message\033[0m ---> " + erromsg.getText());
-		        }
-			
-*/			
-			
-	//		Actions act = new Actions(driver);
-	//	    act.keyUp(Keys.LEFT_CONTROL).keyDown(Keys.LEFT_SHIFT).perform();
-	/*
-		    String WindowHandl = driver.getWindowHandle();
-		    driver.switchTo().window(WindowHandl);
-	*/
-	//	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		    
-	//	    WebElement Verify = driver.findElement(By.xpath("//h4[@class='question-title']"));
-	//	    System.out.println(Verify.getText());
-		    
-	//	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-	/*	    
-		    String WindowHandl = driver.getWindowHandle();
-		    driver.switchTo().window(WindowHandl);
-	*/	    
-		    
-	//	       }
-	//	       else
-	//	       {
-		        
-	//	    	System.out.println("\033[31;1mfalse\033[0m");
-	//	        System.out.println("\033[31;1mError Message\033[0m ---> " + erromsg.getText());
-	//	        
-	//	        driver.close();
-		        
-	//	        driver.navigate().to("http://www.edunuts.com/discussions");
-		        
-	//	       }
-			
 			
 			
 		return null;

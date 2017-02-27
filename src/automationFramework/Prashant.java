@@ -91,8 +91,11 @@ public class Prashant
 	    	System.out.println("");
 	    }
 	    
+	    Thread.sleep(1000);
+	    
 	    try
 	    {
+	    	
 	    	EditAnswers.peditanswers(driver).click();
 	    	Thread.sleep(1000);
 	    }
@@ -111,15 +114,19 @@ public class Prashant
 	    	System.out.println("");
 	    }
 	    
+  
 	    
 	    Thread.sleep(1000);
 	    
 	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    
 		Home_Page.lnk_Logout(driver);
-		System.out.println("Logout Success");
 		
 		System.out.println(driver.getTitle());
+		
+		System.out.println("Logout Success");
+		
+		
 		
 		driver.close();
 	}

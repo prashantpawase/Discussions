@@ -8,18 +8,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import ErrorMsg.Error;
+import highlight.highlightElement;
+
 public class Answers
 {
 
 	public static WebElement panswers(WebDriver driver)
 	{
-		driver.navigate().to("http://www.edunuts.com/discussions");
-		
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-
-	    WebElement dis = driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/h4/a"));
-	    dis.click();
-	    
+ 
+	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    
 	    WebElement Wans = driver.findElement(By.xpath("//a[@data-action='answer-question']"));
@@ -30,24 +28,25 @@ public class Answers
 
 		actt.keyDown(Keys.LEFT_CONTROL).keyDown(Keys.LEFT_SHIFT).perform();
 	    
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		
 	    WebElement ans = driver.findElement(By.xpath("//iframe[@id='answer-description_ifr']"));
+	    highlightElement.highLightElement(driver, ans);
 	    ans.click();
 	    ans.sendKeys("Indian Education is good at certain points");
 	    
 	    WebElement verify = driver.findElement(By.xpath("//iframe[@id='answer-description_ifr']"));
 	    System.out.println(verify.getText());
 	    
-		
-	    WebElement submit = driver.findElement(By.xpath("//button[@type='submit']"));
-	    submit.click();
-		
-		actt.keyUp(Keys.LEFT_CONTROL).keyDown(Keys.LEFT_SHIFT).perform();
+   
+	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    
-	    WebElement span = driver.findElement(By.xpath("html/body/header/div/div/div[2]/div/a/span"));
-	    span.click();
+	    Error.Aerror(driver);
 	    
-	    driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
-		return span;
+	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+	    return null;
 	}
 	
 }
