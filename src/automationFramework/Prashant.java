@@ -3,6 +3,7 @@ package automationFramework;
 //Prashant
 //Prashant Pawase via KuBuntu
 //changes done from KuBuntu
+//kubuntu
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -123,6 +124,7 @@ public class Prashant
 	    
 	    Thread.sleep(1000);
 	    
+	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    
 		Home_Page.lnk_Logout(driver);
